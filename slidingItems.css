@@ -1,0 +1,85 @@
+*{
+	margin:0;
+	padding:0;
+	line-height:1.6;
+}
+#container{
+	width:100%;
+	position: relative;
+	overflow-x: hidden;
+}
+#slider{
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	width:100%;
+	overflow-x:scroll;
+}
+#collection{
+	padding:10px 20px;
+	width:calc(200*9px);
+	overflow-y:auto;
+}
+.hide-scrollbars::-webkit-scrollbar{
+	display:none;
+}
+.card{
+	min-width:100px;
+	width:200px;
+	height:auto;
+	background-color:aliceblue;
+	border:1px solid black;
+	border-radius:5px;
+	box-shadow:1px 1px 5px 0px gray;
+	margin-right: 15px;
+	float:left;
+}
+.card-head{
+	text-align: center;
+	font-family: sans-serif;
+	color:cornflowerblue;
+}
+.card-body{
+	font-size:15px;
+	padding:5px;
+}
+#container button{
+	border-color: transparent #545252;
+    border-style: solid;
+    cursor: pointer;
+    background: transparent;
+    position: absolute;
+    z-index: 1;
+    top:50%;
+	transform: translate(0,-50%);
+	display:none;
+}
+#container button:focus{
+	outline: 0;
+}
+#next{
+	border-width: 14px 0px 14px 14px;
+	right:10px;
+}
+#prev{
+	border-width: 14px 14px 14px 0px;
+	left:10px;
+}
+.btns{
+	position: absolute;
+    height: 100%;
+    width: 6%;
+}
+.btns:first-child{
+	left:0;
+	top:0;
+}
+.btns:last-child{
+	right:0;
+	top:0;
+}
+.btns:first-child:hover #prev{
+	display: block;
+}
+.btns:last-child:hover #next{
+	display: block;
+}
